@@ -1,5 +1,5 @@
-#set the working directory
-setwd("~/Documents/courses/dst3_get_clean/project")
+## optional: set the working directory
+#setwd("~/Documents/courses/dst3_get_clean/project")
 #get the data
 trainingset <- read.csv("UCI HAR Dataset/train/X_train.txt", sep="", header=FALSE)
 testingset <- read.csv("UCI HAR Dataset/test/X_test.txt", sep="", header=FALSE)
