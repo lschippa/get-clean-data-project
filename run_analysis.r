@@ -37,8 +37,11 @@ wholeset$activity <- as.factor(wholeset$activity)
 wholeset$subject <- as.factor(wholeset$subject)
 
 tidyset <- aggregate(wholeset, by=list(activity = wholeset$activity, subject=wholeset$subject), mean)
-# exclude the last 2 coulmns
+# exclude the last 2 columns
 colset <- length(tidyset) 
 tidyset <- tidyset[,1:(colset-2)]
 # write the data to a file
-write.table(tidyset, "tidy.txt", sep="\t")
+write.table(tidyset, "tidy.txt",row.names = FALSE, sep="\t")
+## the tidy data can be read with the following command:
+#data <- read.table("tidy.txt", header = TRUE)
+#View(data)
